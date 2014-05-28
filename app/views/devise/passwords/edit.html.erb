@@ -1,0 +1,29 @@
+<div class="devise_center">
+  <h1>Change your password</h1>
+  <div class="col-md-offset-2">
+    <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => {:class => "new_user form-horizontal", :role => "form", :method => :put}) do |f| %>
+      <%= f.hidden_field :reset_password_token %>
+
+      <div class="form-group">
+        <label for="inputEmail1" class="col-md-2 control-label">Password</label>
+        <div class="col-md-8">
+          <%= f.password_field :password, :autofocus => true, :placeholder => "New password", :class => "form-control" %>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="inputEmail1" class="col-md-2 control-label">Confirm</label>
+        <div class="col-md-8">
+          <%= f.password_field :password_confirmation, :placeholder => "Confirm new password", :class => "form-control" %>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-md-10">
+          <%= f.submit "Change my password", :class => "btn btn-lg btn-success" %>
+        </div>
+      </div>
+
+    <% end %>
+  </div>
+</div>

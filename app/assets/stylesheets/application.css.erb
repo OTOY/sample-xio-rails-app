@@ -1,0 +1,244 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require import_bootstrap
+ *= require theme
+ *= require_self
+ */
+
+body {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.container {
+    max-width: 830px;
+}
+
+.header .brand {
+    display: block;
+    width: 146px;
+    height: 40px;
+    background-image: url(<%= asset_path 'logo.png' %>);
+    background-repeat: no-repeat;
+    background-size: 146px;
+}
+
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+#header-login-form {
+    padding: 17px;
+    padding-bottom: 0px;
+    width: 256px;
+    height: 211px;
+}
+
+.white-caret {
+    border-top-color: white !important;
+    border-bottom-color: white !important;
+}
+
+.devise_center {
+    text-align: center;
+    padding-right: 60px;
+    padding-left: 60px;
+    margin-bottom: 30px;
+}
+
+.header {
+    padding-bottom: 20px;
+}
+
+.devise_center h1 {
+    padding-bottom: 30px;
+}
+
+.align-left {
+    text-align: left !important;
+}
+
+.align-center {
+    text-align: center !important;
+}
+
+.align-right {
+    text-align: right !important;
+}
+
+.boxster-diagram img {
+    width: 100%;
+}
+
+.marketing {
+    text-align: center;
+}
+
+.marketing p {
+    /* font-size: 20px; */
+}
+
+.provider-label {
+    font-size: 13px;
+    color: #666;
+}
+
+.devise_center .jumbotron {
+    background-color: transparent;
+}
+
+.devise_center .jumbotron .btn {
+  font-size: 21px;
+  padding: 14px 24px;
+}
+
+#sign-up-header-lnk {
+    color: #000;
+}
+
+.homepage-well {
+    margin-top: -15px;
+    margin-left: -30px;
+    margin-right: 30px;
+    padding-bottom: 30px;
+}
+
+.homepage-well h2 {
+    padding-bottom: 20px;
+}
+
+.footer ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.footer ul li {
+    display: inline;
+    border-right: 1px solid #bbb;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.footer ul li.last {
+    border-right: 0px;
+}
+
+.content-form .input-group, .content-form p {
+    padding-bottom: 15px;
+}
+
+#contact-form .modal-footer {
+    margin-top: 0;
+}
+
+#meet-team .member p.name {
+    padding-top: 10px;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.storage-provider {
+    margin-right: 20px;
+}
+
+.btn-provider {
+    width: 250px;
+}
+
+.img-provider {
+    width: 250px;
+    height: 45px;
+}
+
+.homepage-jumbotron {
+    height: 592px;
+    width: 800px;
+    border-radius: 6px;
+    margin-bottom: 30px;
+    background-image: url(<%# asset_path 'home_image4.jpg' %>);
+    background-size: contain;
+}
+
+.homepage-jumbotron .container {
+    top: 510px;
+    position: relative;
+}
+
+.homepage-jumbotron .container p {
+    color: #fff;
+    font-size: 20px;
+}
+
+.homepage-jumbotron .container .email {
+    width: 60%;
+    display: inline;
+}
+
+.btn-xlg {
+    padding: 10px 26px;
+    font-size: 30px;
+    line-height: 1.66;
+    border-radius: 6px;
+    min-width: 250px;
+}
+
+@media (min-width: 768px) {
+    .homepage-jumbotron {
+        height: 592px;
+        width: 800px;
+    }
+}
+
+@media (max-width: 767px){
+
+    .header .brand {
+        width: 42px;
+    }
+
+    .homepage-jumbotron {
+        height: 230px;
+        width: 290px;
+        background-repeat:no-repeat;
+        background-color: #333333;
+    }
+    
+    .homepage-jumbotron .container {
+        top: 187px;
+    }
+    
+    .btn-xlg {
+        padding: 1px 15px;
+        font-size: 20px;
+    }
+    
+    body {
+        min-width: 320px;
+    }
+}
+
+.btn-subscribe {
+    min-width: 230px;
+}
+
+.btn-pad-right {
+    margin-right: 20px;
+}
+
+#home-header {
+    margin-top: 0;
+    padding-bottom: 10px;
+}

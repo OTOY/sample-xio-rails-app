@@ -1,0 +1,20 @@
+<div class="devise_center">
+  <h1>Resend unlock instructions</h1>
+  <div class="col-md-offset-2">
+    <%= form_for(resource, :as => resource_name, :url => unlock_path(resource_name), :html => {:class => "new_user form-horizontal", :role => "form"}) do |f| %>
+      <div class="form-group">
+        <label for="inputEmail1" class="col-md-2 control-label">Email</label>
+        <div class="col-md-8">
+          <%= f.email_field :email, :autofocus => true, :placeholder => "Email address", :class => "form-control" %>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-md-10">
+          <%= f.submit "Resend unlock instructions", :class => "btn btn-lg btn-success" %>
+        </div>
+      </div>
+
+    <% end %>
+  </div>
+</div>

@@ -10,7 +10,13 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'bcrypt', '~> 3.1.7'
 gem 'unicorn'
-gem 'foreman'
+gem 'bootstrap-sass'
+gem 'devise', '~> 3.2.4'
+gem 'figaro'
+gem 'dropbox-sdk', '~> 1.6.4'
+gem 'ruby-box', '~> 1.14.0'
+gem 'skydrive', '~> 0.1.5'
+gem 'google-api-client', '~> 0.7.1'
 
 group :production do
   gem 'pg'
@@ -20,6 +26,7 @@ end
 group :development do
   gem 'sqlite3'
   gem 'spring'
+  gem 'foreman'
 end
 
 group :doc do
