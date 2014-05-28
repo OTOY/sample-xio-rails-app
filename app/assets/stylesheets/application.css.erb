@@ -165,27 +165,41 @@ body {
 }
 
 .homepage-jumbotron {
-    height: 592px;
+    height: 500px;
     width: 800px;
-    border-radius: 6px;
     margin-bottom: 30px;
-    background-image: url(<%# asset_path 'home_image4.jpg' %>);
+    background-image: url(<%= asset_path 'thumbnail.jpg' %>);
     background-size: contain;
 }
 
 .homepage-jumbotron .container {
-    top: 510px;
     position: relative;
+    text-align: center;
+    height: 100%;
+    width: 100%;
 }
 
-.homepage-jumbotron .container p {
-    color: #fff;
-    font-size: 20px;
+.homepage-jumbotron .container:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor:pointer;
 }
 
-.homepage-jumbotron .container .email {
-    width: 60%;
-    display: inline;
+.homepage-jumbotron .container .play {
+  padding: 0;
+  margin: 0;
+  top: 200px;
+  left: 300px;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 1px solid #fff;
+  height: 120px;
+  width: 200px;
+}
+
+.homepage-jumbotron .container .play i {
+  padding-top: 10px;
+  color: #fff;
+  font-size: 100px;
 }
 
 .btn-xlg {
@@ -198,7 +212,7 @@ body {
 
 @media (min-width: 768px) {
     .homepage-jumbotron {
-        height: 592px;
+        height: 500px;
         width: 800px;
     }
 }
@@ -210,7 +224,7 @@ body {
     }
 
     .homepage-jumbotron {
-        height: 230px;
+        height: 181px;
         width: 290px;
         background-repeat:no-repeat;
         background-color: #333333;

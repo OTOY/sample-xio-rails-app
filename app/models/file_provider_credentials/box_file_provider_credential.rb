@@ -11,7 +11,7 @@ class BoxFileProviderCredential < FileProviderCredential
 
   def create_from_access_token(request_token, current_user, callback_url, params=nil)
     token = $box.get_access_token(params[:code])
-    credentials = BoxCloudFsCredential.new(:access_token => token.token,
+    credentials = BoxFileProviderCredential.new(:access_token => token.token,
                     :refresh_token => token.refresh_token,
                     :user => current_user,
                     :expires_at => Time.at(token.expires_at))
@@ -26,8 +26,8 @@ class BoxFileProviderCredential < FileProviderCredential
 
   def box_session
     ::RubyBox::Session.new({
-      :client_id => Appslingr::Config[:cloud_fs][:box][:id],
-      :client_secret => Appslingr::Config[:cloud_fs][:box][:secret],
+      :client_id => ENV['BOX_ID'],
+      :client_secret => ENV['BOX_SECRET'],
       :access_token => self.access_token,
       :refresh_token => self.refresh_token
     })
