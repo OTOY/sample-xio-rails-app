@@ -30,18 +30,6 @@ class FileProviderCredential < ActiveRecord::Base
     types.keys.include?(str_type.camelcase)
   end
 
-  def self.provider_auth_type(auth_type)
-    @auth_type = auth_type
-  end
-
-  def self.auth_type
-    @auth_type
-  end
-
-  def auth_type
-    self.class.auth_type
-  end
-
   def self.provider_credentials_attr_accessor(*attrs)
     attrs.each do |provider_credential|
       define_method(:"#{provider_credential}=") do |value|
@@ -89,10 +77,13 @@ class FileProviderCredential < ActiveRecord::Base
     {
       "id" => id.to_s,
       "provider_type" => api_provider_type,
-      "auth_type" => auth_type,
       "label" => provider_label,
-      "expires_at" => expires_at
+      "expires_in" => expires_in
     }.merge(to_specific_provider)
+  end
+
+  def expires_in
+    expires_at.nil? ? nil : [Time.now.to_i - (expires_at.to_i), 0].max
   end
 
   def to_specific_provider

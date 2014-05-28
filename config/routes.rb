@@ -6,5 +6,7 @@ Rails.application.routes.draw do
     match '/file_providers/callback' => "file_providers#callback", :as => :provider_callback, :via => :get
   end
 
+  get 'api/file_providers' => "api#file_providers"
+
   root 'welcome#index'
 end

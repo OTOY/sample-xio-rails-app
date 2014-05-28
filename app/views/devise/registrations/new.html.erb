@@ -1,13 +1,7 @@
-<% content_for :header_content_analytics do %>
-  mixpanel.track('Registration Step 1', {}, function(){$("#mixpanel_distinct_id_value").val(mixpanel.get_distinct_id());});
-  mixpanel.track_forms("#new_user_registration .new_user", "Created Account");
-<% end %>
-
 <div class="devise_center">
   <h1>Sign Up</h1>
   <div class="col-md-offset-1" id="new_user_registration">
     <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:class => "new_user form-horizontal", :role => "form"}) do |f| %>
-      <%= f.hidden_field :mixpanel_id, :value => "", :id => "mixpanel_distinct_id_value" %>
 
       <div class="form-group">
         <label for="inputEmail1" class="col-md-3 control-label">First name</label>
@@ -36,13 +30,6 @@
           <%= f.password_field :password, :placeholder => "Password", :class => "form-control" %>
         </div>
       </div>
-
-      <!-- <div class="form-group">
-        <label for="inputEmail1" class="col-md-3 control-label">Confirm</label>
-        <div class="col-md-8">
-          <%= f.password_field :password_confirmation, :placeholder => "Password confirmation", :class => "form-control" %>
-        </div>
-      </div> -->
 
       <div class="form-group">
         <div class="col-md-10">

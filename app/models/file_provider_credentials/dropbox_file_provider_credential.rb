@@ -2,8 +2,6 @@ class DropboxFileProviderCredential < FileProviderCredential
 
   provider_credentials_attr_accessor :access_token
 
-  provider_auth_type "oauth2"
-
   def get_authorization_url(callback_url)
     return {
       :token => nil,
@@ -25,7 +23,7 @@ class DropboxFileProviderCredential < FileProviderCredential
 
   def to_specific_provider
     {
-      "userToken" => access_token
+      "access_token" => access_token
     }
   end
 

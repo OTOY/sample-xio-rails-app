@@ -160,6 +160,10 @@ GEM
       faraday (>= 0.9.0.rc5)
       jwt (>= 0.1.5)
       multi_json (>= 1.0.0)
+    simple_token_authentication (1.4.0)
+      actionmailer (>= 3.2.6, < 5)
+      activerecord (>= 3.2.6, < 5)
+      devise (~> 3.2.0)
     skydrive (0.1.5)
       activesupport
       httmultiparty
@@ -217,6 +221,7 @@ DEPENDENCIES
   ruby-box (~> 1.14.0)
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
+  simple_token_authentication
   skydrive (~> 0.1.5)
   spring
   sqlite3

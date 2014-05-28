@@ -2,8 +2,6 @@ class OneDriveFileProviderCredential < FileProviderCredential
 
   provider_credentials_attr_accessor :access_token, :refresh_token
 
-  provider_auth_type "oauth2"
-
   def get_authorization_url(callback_url)
     return {
       :token => nil,
@@ -50,7 +48,7 @@ class OneDriveFileProviderCredential < FileProviderCredential
 
   def to_specific_provider
     {
-      "userToken" => updated_access_token
+      "access_token" => updated_access_token
     }
   end
 

@@ -2,8 +2,6 @@ class GoogleDriveFileProviderCredential < FileProviderCredential
 
   provider_credentials_attr_accessor :access_token, :refresh_token
 
-  provider_auth_type "oauth2"
-
   def get_authorization_url(callback_url)
     $google_drive.redirect_uri = callback_url
     return {
@@ -57,7 +55,7 @@ class GoogleDriveFileProviderCredential < FileProviderCredential
 
   def to_specific_provider
     {
-      "userToken" => updated_access_token
+      "access_token" => updated_access_token
     }
   end
 

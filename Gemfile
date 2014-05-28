@@ -17,6 +17,7 @@ gem 'dropbox-sdk', '~> 1.6.4'
 gem 'ruby-box', '~> 1.14.0'
 gem 'skydrive', '~> 0.1.5'
 gem 'google-api-client', '~> 0.7.1'
+gem 'simple_token_authentication'
 
 group :production do
   gem 'pg'

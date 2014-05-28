@@ -1,0 +1,19 @@
+# Add application configuration variables here, as shown below.
+
+BOX_ID: abcde
+BOX_SECRET: abcde
+
+# Get from https://www.dropbox.com/developers/apps
+DROPBOX_KEY: abcde
+DROPBOX_SECRET: abcde
+
+GOOGLE_DRIVE_ID: abcde
+GOOGLE_DRIVE_SECRET: abcde
+
+ONE_DRIVE_ID: abcde
+ONE_DRIVE_SECRET: abcde
+
+APPSTREAM_APPID: abcde
+APPSTREAM_VERID: abcde
+APPSTREAM_API_KEY: abcde
+APPSTREAM_API_SECRET: abcde

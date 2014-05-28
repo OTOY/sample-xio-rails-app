@@ -9,3 +9,23 @@
     </a>
   </div>
 </div>
+
+<%- if user_signed_in? %>
+
+<script type="text/javascript">
+
+var appOpts = {
+  application: "<%= ENV['APPSTREAM_APPID'] %>",
+  version: "<%= ENV['APPSTREAM_VERID'] %>",
+  key_id: "<%= ENV['APPSTREAM_API_KEY'] %>",
+  expires: "<%= @expires %>",
+  file_provider_url: "<%= current_user.file_providers_api_url(api_file_providers_url) %>",
+  signature: "<%= sign_api_request("POST", "https://api.x.io/v1/streams",
+                                     # String needs to be in alphabetical order
+                                     "application=#{ENV['APPSTREAM_APPID']}&expires=#{@expires}&file_provider_url=#{current_user.file_providers_api_url(api_file_providers_url)}&key_id=#{ENV['APPSTREAM_API_KEY']}&version=#{ENV['APPSTREAM_VERID']}",
+                                     ENV['APPSTREAM_API_SECRET']) %>"
+};
+
+</script>
+
+<%- end %>
