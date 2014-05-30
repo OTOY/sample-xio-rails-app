@@ -25,7 +25,7 @@ class OneDriveFileProviderCredential < FileProviderCredential
   end
 
   def skydrive_session
-    Otoy::Skydrive::OauthClient.new(
+    Otoy::OneDrive::OauthClient.new(
       ENV['ONE_DRIVE_ID'],
       ENV['ONE_DRIVE_SECRET'],
       nil,

@@ -1,5 +1,6 @@
 # Add application configuration variables here, as shown below.
 
+# Get from https://app.box.com/developers/services
 BOX_ID: abcde
 BOX_SECRET: abcde
 
@@ -7,9 +8,11 @@ BOX_SECRET: abcde
 DROPBOX_KEY: abcde
 DROPBOX_SECRET: abcde
 
+# Get from https://console.developers.google.com/project
 GOOGLE_DRIVE_ID: abcde
 GOOGLE_DRIVE_SECRET: abcde
 
+# Get from https://account.live.com/developers/applications
 ONE_DRIVE_ID: abcde
 ONE_DRIVE_SECRET: abcde
 
