@@ -19,12 +19,12 @@ class OneDriveFileProviderCredential < FileProviderCredential
   end
 
   def update_provider_details
-    client = ::Skydrive::Client.new(skydrive_session)
-    self.provider_account_details = client.me.as_json
+    client = ::Skydrive::Client.new(onedrive_session)
+    self.provider_account_details = client.class.get('/me').parsed_response.to_json.as_json
     self.label = provider_account_details["name"]
   end
 
-  def skydrive_session
+  def onedrive_session
     Otoy::OneDrive::OauthClient.new(
       ENV['ONE_DRIVE_ID'],
       ENV['ONE_DRIVE_SECRET'],
@@ -36,7 +36,7 @@ class OneDriveFileProviderCredential < FileProviderCredential
   def updated_access_token(force=false)
     if expires_at < 15.minutes.from_now || force
       begin
-        token = ::Skydrive::Client.new(skydrive_session).refresh_access_token!
+        token = ::Skydrive::Client.new(onedrive_session).refresh_access_token!
         self.access_token = token.token
         self.expires_at = Time.at(token.expires_at)
         self.save!
