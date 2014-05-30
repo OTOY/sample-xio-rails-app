@@ -20,7 +20,7 @@ class OneDriveFileProviderCredential < FileProviderCredential
 
   def update_provider_details
     client = ::Skydrive::Client.new(onedrive_session)
-    self.provider_account_details = client.class.get('/me').parsed_response.to_json.as_json
+    self.provider_account_details = client.class.get('/me').parsed_response
     self.label = provider_account_details["name"]
   end
 
