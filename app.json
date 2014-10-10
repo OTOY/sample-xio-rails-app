@@ -1,0 +1,40 @@
+{
+    "name": "X.IO Sample Rails Application",
+    "description": "This Rails app integrates with the X.IO API and gives you a basic working site to stream you app.",
+    "keywords": [
+        "streaming",
+        "HTML5",
+        "X.IO"
+    ],
+    "website": "http://www.x.io/",
+    "repository": "https://github.com/appslingr/sample-xio-rails-app",
+    "success_url": "/",
+    "scripts": {
+        "postdeploy": "bundle exec rake db:migrate"
+    },
+    "env": {
+        "SECRET_KEY_BASE": {
+            "description": "A secret key for verifying the integrity of signed cookies.",
+            "generator": "secret"
+        },
+        "APPSTREAM_APPID": {
+            "description": "Application ID of the application you want to run",
+            "required": true
+        },
+        "APPSTREAM_VERID": {
+            "description": "Version ID for the version of the application to run",
+            "required": true
+        },
+        "APPSTREAM_API_KEY": {
+            "description": "X.IO API Key ID",
+            "required": true
+        },
+        "APPSTREAM_API_SECRET": {
+            "description": "X.IO API Secret Key",
+            "required": true
+        }
+    },
+    "addons": [
+        "heroku-postgresql:hobby-dev"
+    ]
+}
