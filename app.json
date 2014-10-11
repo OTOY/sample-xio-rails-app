@@ -32,6 +32,14 @@
         "APPSTREAM_API_SECRET": {
             "description": "X.IO API Secret Key",
             "required": true
+        },
+        "DROPBOX_KEY": {
+            "description": "Dropbox App Key from https://www.dropbox.com/developers/apps",
+            "required": false
+        },
+        "DROPBOX_SECRET": {
+            "description": "Dropbox App Secret from https://www.dropbox.com/developers/apps",
+            "required": false
         }
     },
     "addons": [
